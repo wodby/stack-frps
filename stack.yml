@@ -1,0 +1,10 @@
+name: frps
+title: FRP Server
+icon: frpc
+
+services:
+- name: frps
+  title: FRP Server
+  service: frps
+  required: true
+  main: true
