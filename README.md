@@ -5,6 +5,10 @@ Deploy FRP Server applications on Kubernetes with Wodby.
 This repository defines the Wodby stack manifests and default service
 composition for FRP Server.
 
+<!-- wodby:generated:start -->
+
+## Stack contract
+
 - [FRP Server stack on Wodby](https://wodby.com/stacks/frps)
 - [Browse Wodby application stacks](https://wodby.com/stacks)
 - [FRP Server stack guide](https://wodby.com/docs/2.0/stacks/catalog/frps/)
@@ -20,6 +24,18 @@ composition for FRP Server.
 | Component / service | Default configuration |
 | --- | --- |
 | FRP Server<br>`frps` | required; enabled by default |
+
+Enabled optional services are selected by default but can be excluded when an
+app is created. Disabled optional services are available but not selected by
+default. Required services cannot be excluded.
+
+## Validate the stack manifest
+
+```bash
+wodby stack validate-manifest stack.yml --org <org-id>
+```
+
+<!-- wodby:generated:end -->
 
 ## Deploy this stack
 
@@ -39,11 +55,3 @@ production environments.
 When replacing or renaming a stack service, update every related link target
 and derivative reference. Stack-local names and referenced service names are
 distinct identifiers.
-
-Validate the manifests with:
-
-```bash
-wodby stack validate-manifest stack.yml --org <org-id>
-```
-
-See the [stack manifest reference](https://wodby.com/docs/2.0/stacks/template/) and the [managed services index](https://github.com/wodby/services).
